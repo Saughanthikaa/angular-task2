@@ -1,0 +1,11 @@
+<br><br><br><br><br><br><br><br><div class="container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <label for="adminId">ADMIN ID</label>
+    <input type="text" id="adminId" formControlName="adminId">
+    <label for="password">PASSWORD</label>
+    <input type="password" id="password" formControlName="password">
+    <button type="submit">Login</button>
+    <p class="error-message" *ngIf="invalidCredentials">Invalid ID or password</p>
+  </form>
+</div>

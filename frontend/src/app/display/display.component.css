@@ -1,0 +1,105 @@
+ body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .add-button {
+      margin-bottom: 10px;
+    }
+
+    .add-form {
+      margin-bottom: 20px;
+    }
+
+    .update-form {
+      margin-top: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      /* width: 100%; */
+      width: 80%; 
+      box-sizing: border-box;
+    }
+
+    .form-box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 4px;
+      width: 400px; /* Adjust the width as needed */
+      margin: 0 auto; /* Center the box horizontally */
+    }
+    .centered-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .deletee{
+        background-color: #bf0b0b;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+button{
+    background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+}
+    button[type="submit"],
+    button[type="button"] {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button[type="button"] {
+      background-color: #f44336;
+      margin-left: 10px;
+    }

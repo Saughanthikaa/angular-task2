@@ -1,0 +1,52 @@
+<button (click)="showAddForm()">Add</button>
+
+<div class="form-box" *ngIf="isAdding">
+  <form (ngSubmit)="submitAddForm()">
+    <input type="text" name="userId" [(ngModel)]="newStudent.userid" placeholder="User ID" required><br>
+    <input type="text" name="name" [(ngModel)]="newStudent.name" placeholder="Name" required><br>
+    <input type="email" name="email" [(ngModel)]="newStudent.emaill" placeholder="Email" required><br>
+    <input type="text" name="phone" [(ngModel)]="newStudent.phone" placeholder="Phone" required><br>
+    <input type="number" name="attendance" [(ngModel)]="newStudent.attendance" placeholder="Attendance" required><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<table>
+  <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Attendance</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{ student.userid }}</td>
+    <td>{{ student.name }}</td>
+    <td>{{ student.emaill }}</td>
+    <td>{{ student.phone }}</td>
+    <td>{{ student.attendance }}</td>
+    <td>
+        <button (click)="updateStudent(student)">Update</button>&nbsp;
+      <button (click)="deleteStudent(student)" class="deletee">Delete</button>
+    </td>
+  </tr>
+</table>
+<div *ngIf="selectedStudent">
+    <h2>Update Student</h2>
+    <form (submit)="submitUpdateForm()">
+      <label>User ID:</label>
+      <input type="text" name="userid" [(ngModel)]="selectedStudent.userid" required>
+      <label>Name:</label>
+      <input type="text" name="name" [(ngModel)]="selectedStudent.name" required>
+      <label>Email:</label>
+      <input type="email" name="email" [(ngModel)]="selectedStudent.emaill" required>
+      <label>Phone:</label>
+      <input type="text" name="phone" [(ngModel)]="selectedStudent.phone" required>
+      <label>Attendance:</label>
+      <input type="number" name="attendance" [(ngModel)]="selectedStudent.attendance" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
